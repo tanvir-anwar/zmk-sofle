@@ -1,10 +1,10 @@
 # (Eyelash Peripherals) Sofle ZMK Repository
 
-### Components
+## Components
 
-1. Pre-soldered PCB and case - from AliExpress
-2. Akko Rosewood Linear Switch - from [Amazon](https://www.amazon.com/dp/B0D7VG2QJH)
-3. YMDK MX Keycaps - from [Amazon](https://www.amazon.com/dp/B07JKTQJQ7)
+1. Pre-soldered PCB and case - from [AliExpress Highland 3C Store](https://www.aliexpress.us/item/3256808969391004.html)
+2. ZhouWang Golden Autumn Silent Tactile Switch - from [Amazon](https://www.amazon.com/dp/B0GQT23BJZ)
+3. XDAL DSA Keycaps - from [AliExpress](https://www.aliexpress.us/item/3256803108650035.html)
 
 For 3D printed model files or keyboard hardware issues, contact `380465425@qq.com`.
 
@@ -30,9 +30,11 @@ keymap -c keymap_drawer.config.yaml draw keymap-drawer/eyelash_sofle.yaml > keym
 
 Parsing catches syntax errors faster than a full firmware build.
 
-### Quick remapping via ZMK Studio (no build needed)
+### Quick remapping via ZMK Studio (NOT RECOMMENDED)
 
 For simple key binding changes, connect the left half via USB-C and open [ZMK Studio](https://zmk.studio/) in Chrome/Edge. Changes are applied live over USB — no tools or network access required.
+
+DO NOT attempt this if you plan to flash your own firmware. As mentioned below, ZMK Studio changes are applied on top of firmware changes, and there's no good way to visualize / maintain the layout. It's better to always edit keymap and flash firmware instead.
 
 ## Firmware Build (GitHub Actions)
 
