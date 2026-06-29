@@ -61,7 +61,12 @@ Keymap changes use a **markdown-first staging workflow**:
    ```
 5. **Build and flash** — push to GitHub, download `.uf2` artifacts from the Actions workflow, and flash both halves.
 
-The KEYMAP.md legend documents notation conventions (`hold/tap`, `[Sh/Caps]`, `<K1/K2>`, etc.) that map to specific ZMK behaviors. When adding new behavior types, update the legend first.
+The KEYMAP.md legend documents notation conventions (`hold/tap`, `SHIFT/Caps_Word`, `&mo_tog L1`, etc.) that map to specific ZMK behaviors. When adding new behavior types, update the legend first.
+
+## Coding Guidelines
+1. ALWAYS use conventional commits syntax to write commit messages.
+2. NEVER update keymap config unless KEYMAP.md changes are manually reviewed and confirmed.
+3. ALWAYS ask the user to manually review and validate the rendered keymap diagram, before the final commit.
 
 ## Conventions
 
