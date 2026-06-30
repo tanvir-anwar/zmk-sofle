@@ -8,6 +8,8 @@
 
 For 3D printed model files or keyboard hardware issues, contact `380465425@qq.com`.
 
+![image](sofle-keyboard.jpg)
+
 ## Keymap Diagram Generation (Local)
 
 Generate keymap diagrams locally to validate syntax before pushing.

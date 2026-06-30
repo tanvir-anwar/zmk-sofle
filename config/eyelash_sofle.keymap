@@ -126,7 +126,7 @@
             >;
 
             sensor-bindings = <&rsr_vol &rsr_trans>;
-            display-name = "LAYER0";
+            display-name = "QWERTY";
         };
 
         function_layer {
