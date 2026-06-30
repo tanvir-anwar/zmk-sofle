@@ -1,6 +1,6 @@
 layout: {zmk_keyboard: eyelash_sofle}
 layers:
-  LAYER0:
+  QWERTY:
   - '`'
   - '1'
   - '2'
@@ -27,7 +27,7 @@ layers:
   - O
   - P
   - '-'
-  - BSPC
+  - {t: \, h: GLOBE}
   - A
   - S
   - D
@@ -57,12 +57,12 @@ layers:
   - {t: FUNC, h: FUNC}
   - '&caps_word'
   - LALT
-  - LGUI
+  - BSPC
   - LSHFT
   - {t: ▽, type: trans}
   - SPACE
   - {t: ENTER, h: FUNC}
-  - {t: \, h: GLOBE}
+  - LGUI
   - '['
   - ']'
   FUNC:

@@ -48,9 +48,9 @@ Sofle-specific differences (justified by the extra keys/hardware):
 |----------|----|----|----|----|----|-----|----|----|----|----|----|----|---------|
 | `        | 1  | 2  | 3  | 4  | 5  |     |    | 6  | 7  | 8  | 9  | 0  | EQUAL   |
 | TAB      | Q  | W  | E  | R  | T  |     |    | Y  | U  | I  | O  | P  | MINUS   |
-| BSPC     | A  | S  | D  | F  | G  |     |    | H  | J  | K  | L  | ;  | '       |
+| FUNC/BSLH | A  | S  | D  | F  | G  |     |    | H  | J  | K  | L  | ;  | '       |
 | CTRL/ESC | Z  | X  | C  | V  | B  |     |    | N  | M  | ,  | .  | /  | SHIFT   |
-| Mute (enc) | &mo_tog L1 | Caps_Word | Opt | Cmd | Shift |    |    | Space | L1/Enter | Fn/BSLH | [  | ]  |  |
+| Mute (enc) | &mo_tog L1 | Caps_Word | Opt | BSPC | Shift |    |    | Space | L1/Enter | Cmd | [  | ]  |  |
 
 Encoder: Volume Up / Down (push = Mute)
 Joystick (center column): Arrow Keys
@@ -58,8 +58,8 @@ Joystick (center column): Arrow Keys
 > **Notes:**
 > - **10 thumb keys** (5 left + 5 right) + the encoder. The joystick center-press is
 >   omitted from this row for clarity (like the Corne 5-way switch).
->   - Left:  `&mo_tog L1`, `Caps_Word`, `Opt`, `Cmd`, `Shift`
->   - Right: `Space`, `L1/Enter`, `Fn/BSLH`, `[`, `]`
+>   - Left:  `&mo_tog L1`, `Caps_Word`, `Opt`, `BSPC`, `Shift`
+>   - Right: `Space`, `L1/Enter`, `Cmd`, `[`, `]`
 > - `Mute (enc)` (leftmost cell) is the rotary encoder push-button (`&kp C_MUTE`) —
 >   shown only because the firmware row forces a binding there.
 > - `CTRL/ESC` (left pinky, Z-row) replaces the old plain Left Shift — matches Corne.
@@ -67,8 +67,10 @@ Joystick (center column): Arrow Keys
 >   mirroring the Corne thumb-cluster hand position.
 > - `&mo_tog L1` (leftmost thumb key) = `&mo_tog 1 1`: hold = momentary Function,
 >   tap = lock Function on (tap again to unlock).
-> - `BSPC` (left of A, A-row pinky) — matches Corne. On Mac the "delete" key is
->   Backspace.
+> - **Pinky-relief rotation** (matches Corne): `BSPC` moved off the weak left pinky
+>   onto the **left thumb** (where Cmd was); `Cmd` moved to the **right thumb** (where
+>   Globe/Backslash was) — this also makes ⌘+C/V/Z/X cross-hand chords; and the rare
+>   `FUNC/BSLH` (hold macOS Globe, tap Backslash) drops to the **left-of-A pinky**.
 > - `Caps_Word` has its **own dedicated thumb key** (`&caps_word`). This frees the
 >   right pinky to be a plain `SHIFT` (`&kp RSHFT`) instead of the `&caps LSHFT 0`
 >   hold-tap — simpler, and a true cross-hand Shift.
