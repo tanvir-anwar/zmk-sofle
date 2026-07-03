@@ -40,7 +40,7 @@ layers:
   - L
   - ;
   - ''''
-  - {t: ESC, h: LCTRL}
+  - LALT
   - Z
   - X
   - C
@@ -56,13 +56,13 @@ layers:
   - MUTE
   - {t: FUNC, h: FUNC}
   - '&caps_word'
-  - LALT
-  - BSPC
+  - DEL
+  - LGUI
   - LSHFT
   - {t: ▽, type: trans}
   - SPACE
   - {t: ENTER, h: FUNC}
-  - LGUI
+  - {t: ESC, h: RCTRL}
   - '['
   - ']'
   FUNC:
@@ -116,7 +116,7 @@ layers:
   - PG DN
   - PG UP
   - Gui+RIGHT
-  - {t: ▽, type: trans}
+  - '&cmd_click'
   - '&bootloader'
   - MUTE
   - {type: held}
