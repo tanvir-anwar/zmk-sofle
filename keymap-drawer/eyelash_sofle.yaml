@@ -56,7 +56,7 @@ layers:
   - MUTE
   - {t: FUNC, h: FUNC}
   - '&caps_word'
-  - DEL
+  - BSPC
   - LGUI
   - LSHFT
   - {t: ▽, type: trans}

@@ -51,7 +51,7 @@ Sofle-specific differences (justified by the extra keys/hardware):
 | TAB      | Q  | W  | E  | R  | T  |     |    | Y  | U  | I  | O  | P  | MINUS   |
 | FUNC/BSLH | A  | S  | D  | F  | G  |     |    | H  | J  | K  | L  | ;  | '       |
 | ALT      | Z  | X  | C  | V  | B  |     |    | N  | M  | ,  | .  | /  | SHIFT   |
-| Mute (enc) | &mo_tog L1 | Caps_Word | DEL | Cmd | Shift |    |    | Space | L1/Enter | CTRL/ESC | [  | ]  |  |
+| Mute (enc) | &mo_tog L1 | Caps_Word | Bksp | Cmd | Shift |    |    | Space | L1/Enter | CTRL/ESC | [  | ]  |  |
 
 Encoder: Volume Up / Down (push = Mute)
 Joystick (center column): Arrow Keys
