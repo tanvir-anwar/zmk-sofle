@@ -54,8 +54,8 @@ layers:
   - /
   - RSHFT
   - MUTE
-  - {t: FUNC, h: FUNC}
   - '&caps_word'
+  - SPACE
   - BSPC
   - LGUI
   - LSHFT
@@ -119,14 +119,14 @@ layers:
   - '&cmd_click'
   - '&bootloader'
   - MUTE
-  - {type: held}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - '&mkp LCLK'
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - {type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}

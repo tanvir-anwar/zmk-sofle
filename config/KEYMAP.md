@@ -51,7 +51,7 @@ Sofle-specific differences (justified by the extra keys/hardware):
 | TAB      | Q  | W  | E  | R  | T  |     |    | Y  | U  | I  | O  | P  | MINUS   |
 | FUNC/BSLH | A  | S  | D  | F  | G  |     |    | H  | J  | K  | L  | ;  | '       |
 | ALT      | Z  | X  | C  | V  | B  |     |    | N  | M  | ,  | .  | /  | SHIFT   |
-| Mute (enc) | &mo_tog L1 | Caps_Word | Bksp | Cmd | Shift |    |    | Space | L1/Enter | CTRL/ESC | [  | ]  |  |
+| Mute (enc) | Caps_Word | Space | Bksp | Cmd | Shift |    |    | Space | L1/Enter | CTRL/ESC | [  | ]  |  |
 
 Encoder: Volume Up / Down (push = Mute)
 Joystick (center column): Arrow Keys
@@ -59,7 +59,7 @@ Joystick (center column): Arrow Keys
 > **Notes:**
 > - **10 thumb keys** (5 left + 5 right) + the encoder. The joystick center-press is
 >   omitted from this row for clarity (like the Corne 5-way switch).
->   - Left:  `&mo_tog L1`, `Caps_Word`, `DEL`, `Cmd`, `Shift`
+>   - Left:  `Caps_Word`, `Space`, `Bksp`, `Cmd`, `Shift`
 >   - Right: `Space`, `L1/Enter`, `CTRL/ESC`, `[`, `]`
 > - `Mute (enc)` (leftmost cell) is the rotary encoder push-button (`&kp C_MUTE`) —
 >   shown only because the firmware row forces a binding there.
@@ -67,18 +67,23 @@ Joystick (center column): Arrow Keys
 >   `=` already lives on the number row, so no tap action is needed here).
 > - The thumb `Shift` (L5) replaces the old `&mo 1` — Shift now lives on the thumb,
 >   mirroring the Corne thumb-cluster hand position.
-> - `&mo_tog L1` (leftmost thumb key) = `&mo_tog 1 1`: hold = momentary Function,
->   tap = lock Function on (tap again to unlock).
+> - **No sticky Function layer.** Function is reached by **holding Enter**
+>   (`&lt 1 ENTER`) only — the old `&mo_tog L1` lock was dropped because an accidental
+>   tap on the outermost thumb key silently trapped you in the Function layer.
 > - **Thumb-cluster mods** (matches Corne): `Ctrl/Esc` on the **right thumb** for
->   unix/terminal chords; `Cmd` on the **left thumb** (Mac position); `DEL` on the
+>   unix/terminal chords; `Cmd` on the **left thumb** (Mac position); `Bksp` on the
 >   **left thumb, outboard of Cmd** — logical reverse of Enter on the opposite hand,
 >   so a mishit lands on `Cmd` rather than `Enter`. `Alt` drops to the left-of-Z pinky;
 >   the rare `FUNC/BSLH` (hold macOS Globe, tap Backslash) sits on the left-of-A pinky.
-> - `Caps_Word` has its **own dedicated thumb key** (`&caps_word`). This frees the
->   right pinky to be a plain `SHIFT` (`&kp RSHFT`) instead of the `&caps LSHFT 0`
->   hold-tap — simpler, and a true cross-hand Shift.
+> - `Caps_Word` (`&caps_word`) lives on the **outermost** left thumb key — the easiest
+>   spot to mis-hit, but a stray tap self-cancels at the next word-break, so it's
+>   harmless there. This also frees the right pinky to be a plain `SHIFT` (`&kp RSHFT`)
+>   instead of the `&caps LSHFT 0` hold-tap — simpler, and a true cross-hand Shift.
+> - `Space` sits on the **second** left thumb key (in addition to the right-thumb
+>   `Space`) — it replaced `Caps_Word` here so a reach-for-`Bksp` mishit lands on the
+>   harmless `Space` rather than toggling Caps Word.
 
-## Layer 1: FUNCTION (hold Enter, or lock via &mo_tog L1)
+## Layer 1: FUNCTION (hold Enter)
 
 Parity with Corne: **Bluetooth on row A**, **RGB on row Z**, vim nav on the right hand.
 Sofle's number row becomes **F1–F10**. Center column = joystick → mouse cursor.
@@ -109,11 +114,6 @@ Joystick (center column): Mouse cursor (`&mmv MOVE_*`); center-press = Left Clic
 >   key as on the Corne, for cognitive parity. Mute is **not** here (encoder covers it).
 > - Top-right corner (GRAVE position) stays **transparent**.
 > - Home/End **dropped** — redundant with vim `0/$/gg/G` and macOS `⌘+←/→`.
-
-> ⚠️ The Function-layer thumb under `&mo_tog L1` must stay **transparent**. When
-> Function is locked on, the unlock tap falls through this transparent key to Layer 0's
-> `&mo_tog` to toggle it back off. Do **not** assign a real binding there, or you will
-> lose the ability to exit the locked Function layer.
 
 ## Combos
 
