@@ -92,7 +92,7 @@ Sofle's number row becomes **F1–F10**. Center column = joystick → mouse curs
 |---|------------|--------|---------|-------|----------|-----|------|------|-----|--------|------------|
 |   | F1         | F2     | F3      | F4    | F5       | F6  | F7   | F8   | F9  | F10    | RGB Bri+   |
 |   |            |        |         | ⌘⇧4   |          |     |      |      |     |        | RGB Bri−   |
-|   | BT Clr All | BT 0   |         |       | USB      | ←   | ↓    | ↑    | →   | LClick | RClick     |
+| BT Clr All | BT 0 | BT 1  |       |       | USB      | ←   | ↓    | ↑    | →   | LClick | RClick     |
 |   | RGB Off    | RGB On | RGB Eff | Reset | Soft Off | ⌘+← | PgDn | PgUp | ⌘+→ | ⌘+Click | Bootloader |
 |   |            |        |         |       |          |     |      |      |     |        |            |
 
@@ -107,7 +107,13 @@ Joystick (center column): Mouse cursor (`&mmv MOVE_*`); center-press = Left Clic
 > - **RGB brightness** on the right `R` column: `RGB Bri+` on the EQUAL position,
 >   `RGB Bri−` on the MINUS position — mnemonic mirror of ⌘+ zoom-in / ⌘- zoom-out.
 > - **RGB Off / On / Eff** on the Z-row left (Corne's three), then Reset, Soft Off.
-> - **BT 0 only** (+ Clr All), matching Corne. USB output toggle on L5.
+> - **Bluetooth** (matches Corne): `BT Clr All` sits on the **left pinky** (Z-row L),
+>   a deliberate stretch — it wipes *all* pairings, so it must be hard to hit by
+>   accident. `BT 0` / `BT 1` sit on `A` / `S`; a stray press there just re-selects a
+>   profile (harmless) instead of clearing pairings. USB output toggle on L5.
+> - **No function-layer `~`** (unlike Corne): Sofle's base layer already has a physical
+>   `` ` ``/`~` in its top-left corner (real number row), so the tilde family is already
+>   home — no function-layer slot needed. This divergence from Corne is intentional.
 > - **Right hand mirrors Corne Layer 2**: A-row = vim arrows `← ↓ ↑ →` then
 >   `LClick`/`RClick`; Z-row = `⌘+← PgDn PgUp ⌘+→` then `Bootloader`.
 > - `⌘⇧4` screenshot macro sits on the **R key** (Q-row, L4) — physically the same

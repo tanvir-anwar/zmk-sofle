@@ -143,7 +143,7 @@
             bindings = <
 &trans      &kp F1           &kp F2          &kp F3           &kp F4        &kp F5         &mmv MOVE_UP     &kp F6      &kp F7     &kp F8     &kp F9         &kp F10    &rgb_ug RGB_BRI
 &trans      &trans           &trans          &trans           &screenshot   &trans         &mmv MOVE_DOWN   &trans      &trans     &trans     &trans         &trans     &rgb_ug RGB_BRD
-&trans      &bt BT_CLR_ALL   &bt BT_SEL 0    &trans           &trans        &out OUT_USB   &mmv MOVE_LEFT   &kp LEFT    &kp DOWN   &kp UP     &kp RIGHT      &mkp LCLK  &mkp RCLK
+&bt BT_CLR_ALL &bt BT_SEL 0  &bt BT_SEL 1    &trans           &trans        &out OUT_USB   &mmv MOVE_LEFT   &kp LEFT    &kp DOWN   &kp UP     &kp RIGHT      &mkp LCLK  &mkp RCLK
 &trans      &rgb_ug RGB_OFF  &rgb_ug RGB_ON  &rgb_ug RGB_EFF  &sys_reset    &soft_off      &mmv MOVE_RIGHT  &kp LG(LEFT)&kp PG_DN  &kp PG_UP  &kp LG(RIGHT)  &cmd_click &bootloader
 &kp C_MUTE  &trans           &trans          &trans           &trans        &trans         &mkp LCLK        &trans      &trans     &trans     &trans         &trans
             >;

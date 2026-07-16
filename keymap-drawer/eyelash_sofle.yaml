@@ -92,9 +92,9 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - RGB BRD
-  - {t: ▽, type: trans}
   - BT CLR ALL
   - {t: BT, h: '0'}
+  - {t: BT, h: '1'}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - OUT USB
