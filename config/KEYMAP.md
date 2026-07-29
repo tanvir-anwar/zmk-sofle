@@ -91,9 +91,9 @@ Sofle's number row becomes **F1–F10**. Center column = joystick → mouse curs
 | L | L1         | L2     | L3      | L4    | L5       | R5  | R4   | R3   | R2  | R1     | R          |
 |---|------------|--------|---------|-------|----------|-----|------|------|-----|--------|------------|
 |   | F1         | F2     | F3      | F4    | F5       | F6  | F7   | F8   | F9  | F10    | RGB Bri+   |
-|   |            |        |         | ⌘⇧4   |          |     |      |      |     |        | RGB Bri−   |
+|   |            |        |         | ⌘⇧4   |          |     |      |      |     |        | Bootloader |
 | BT Clr All | BT 0 | BT 1  |       |       | USB      | ←   | ↓    | ↑    | →   | LClick | RClick     |
-|   | RGB Off    | RGB On | RGB Eff | Reset | Soft Off | ⌘+← | PgDn | PgUp | ⌘+→ | ⌘+Click | Bootloader |
+|   | RGB Off    | RGB On | RGB Eff | Reset | Soft Off | ⌘+← | PgDn | PgUp | ⌘+→ | ⌘+Click |            |
 |   |            |        |         |       |          |     |      |      |     |        |            |
 
 Encoder: Brightness Up / Down
@@ -104,8 +104,8 @@ Joystick (center column): Mouse cursor (`&mmv MOVE_*`); center-press = Left Clic
 >   *true* function keys (HID F-codes); macOS does **not** remap them to media on a
 >   non-Apple keyboard, so e.g. F10 is F10, not Mute. (Mute lives on the encoder.)
 >   F-key usefulness is a TODO — revisit how to better leverage this row.
-> - **RGB brightness** on the right `R` column: `RGB Bri+` on the EQUAL position,
->   `RGB Bri−` on the MINUS position — mnemonic mirror of ⌘+ zoom-in / ⌘- zoom-out.
+> - **RGB brightness**: `RGB Bri+` on the top-right `R` column (EQUAL position).
+>   `RGB Bri−` dropped — the encoder handles brightness on this layer.
 > - **RGB Off / On / Eff** on the Z-row left (Corne's three), then Reset, Soft Off.
 > - **Bluetooth** (matches Corne): `BT Clr All` sits on the **left pinky** (Z-row L),
 >   a deliberate stretch — it wipes *all* pairings, so it must be hard to hit by
@@ -115,7 +115,10 @@ Joystick (center column): Mouse cursor (`&mmv MOVE_*`); center-press = Left Clic
 >   `` ` ``/`~` in its top-left corner (real number row), so the tilde family is already
 >   home — no function-layer slot needed. This divergence from Corne is intentional.
 > - **Right hand mirrors Corne Layer 2**: A-row = vim arrows `← ↓ ↑ →` then
->   `LClick`/`RClick`; Z-row = `⌘+← PgDn PgUp ⌘+→` then `Bootloader`.
+>   `LClick`/`RClick`; Z-row = `⌘+← PgDn PgUp ⌘+→` then `⌘+Click`.
+> - **Bootloader** on the Q-row right `R` column (MINUS position, right of P) —
+>   rare maintenance key pushed high and out of the way. Bottom-right (RSHFT position)
+>   is now transparent so `Func + Shift + navigation` chords work.
 > - `⌘⇧4` screenshot macro sits on the **R key** (Q-row, L4) — physically the same
 >   key as on the Corne, for cognitive parity. Mute is **not** here (encoder covers it).
 > - Top-right corner (GRAVE position) stays **transparent**.

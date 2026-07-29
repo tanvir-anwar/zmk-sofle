@@ -91,7 +91,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - RGB BRD
+  - '&bootloader'
   - BT CLR ALL
   - {t: BT, h: '0'}
   - {t: BT, h: '1'}
@@ -117,7 +117,7 @@ layers:
   - PG UP
   - Gui+RIGHT
   - '&cmd_click'
-  - '&bootloader'
+  - {t: ▽, type: trans}
   - MUTE
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
