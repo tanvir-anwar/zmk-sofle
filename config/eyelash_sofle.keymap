@@ -88,6 +88,11 @@
             bindings = <&soft_off>;
             key-positions = <14 28 40>;
         };
+
+        toggle_colemak {
+            bindings = <&tog 1>;
+            key-positions = <53 59>;
+        };
     };
 
     macros {
@@ -130,13 +135,26 @@
             bindings = <
 &kp GRAVE      &kp N1       &kp N2      &kp N3      &kp N4     &kp N5        &kp UP_ARROW     &kp N6     &kp N7       &kp N8          &kp N9     &kp N0    &kp EQUAL
 &kp TAB        &kp Q        &kp W       &kp E       &kp R      &kp T         &kp DOWN_ARROW   &kp Y      &kp U        &kp I           &kp O      &kp P     &kp MINUS
-&ht GLOBE BSLH &kp A        &kp S       &kp D       &kp F      &kp G         &kp LEFT_ARROW   &kp H      &kp J        &kp K           &kp L      &kp SEMI  &kp APOS
-&kp LALT       &kp Z        &kp X       &kp C       &kp V      &kp B         &kp RIGHT_ARROW  &kp N      &kp M        &kp COMMA       &kp DOT    &kp FSLH  &kp RSHFT
-&kp C_MUTE     &caps_word   &kp SPACE   &kp BSPC    &kp LGUI   &kp LSHFT     &trans           &kp SPACE  &lt 1 ENTER  &ht RCTRL ESC   &kp LBKT   &kp RBKT
+&kp GLOBE      &kp A        &kp S       &kp D       &kp F      &kp G         &kp LEFT_ARROW   &kp H      &kp J        &kp K           &kp L      &kp SEMI  &kp APOS
+&sk LALT       &kp Z        &kp X       &kp C       &kp V      &kp B         &kp RIGHT_ARROW  &kp N      &kp M        &kp COMMA       &kp DOT    &kp FSLH  &kp RSHFT
+&kp C_MUTE     &caps_word   &kp BSLH    &kp BSPC    &sk LGUI   &sk LSHFT     &trans           &kp SPACE  &lt 2 ENTER  &ht RCTRL ESC   &kp LBKT   &kp RBKT
             >;
 
             sensor-bindings = <&rsr_vol &rsr_trans>;
             display-name = "QWERTY";
+        };
+
+        colemak_dh {
+            bindings = <
+&trans         &trans       &trans      &trans       &trans      &trans        &trans           &trans     &trans       &trans           &trans      &trans    &trans
+&trans         &kp Q        &kp W       &kp F        &kp P       &kp B         &trans           &kp J      &kp L        &kp U            &kp Y       &kp SEMI  &trans
+&trans         &kp A        &kp R       &kp S        &kp T       &kp G         &trans           &kp M      &kp N        &kp E            &kp I       &kp O     &trans
+&trans         &kp Z        &kp X       &kp C        &kp D       &kp V         &trans           &kp K      &kp H        &kp COMMA        &kp DOT     &kp FSLH  &trans
+&trans         &trans       &trans      &trans       &trans      &trans        &trans           &trans     &trans       &trans           &trans      &trans
+            >;
+
+            sensor-bindings = <&rsr_vol &rsr_trans>;
+            display-name = "COLEMAK-DH";
         };
 
         function_layer {

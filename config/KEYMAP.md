@@ -14,10 +14,10 @@ Sofle-specific differences (justified by the extra keys/hardware):
 
 - Number row + brackets live on the base layer, so **no symbol layer is needed**
   (Corne's SYMBOL layer existed only because it lacked a number row).
-- Left Home (a spare bottom-row key) → `&mo_tog 1 1`: hold for momentary Function,
-  tap to lock it on. Corne had no spare key for this — it lives on the left thumb there.
+- Colemak-DH is a persistent alternate base layer, toggled with the outermost
+  left thumb key plus the right-thumb Space key.
 - Joystick = arrow keys on the base layer; mouse cursor on the Function layer.
-- Two layers only: QWERTY (0) + FUNCTION (1, hold Enter).
+- Three layers: QWERTY (0) + Colemak-DH (1) + FUNCTION (2, hold Enter).
 - **The joystick center-press is omitted from the layout tables below for clarity**
   (like the Corne 5-way switch). It still occupies a slot in the `.keymap` thumb row
   — don't be fooled into thinking the bottom row has an extra physical key. There are
@@ -30,13 +30,11 @@ Sofle-specific differences (justified by the extra keys/hardware):
 | _(blank)_ | Transparent — falls through to the layer below |
 | _(none)_ | No action |
 | hold/tap | Hold for first action, tap for second |
-| SHIFT/Caps_Word | Hold-tap — hold for Shift, tap for Caps Word |
-| &mo_tog L1 | Hold-tap — hold for momentary Layer 1, tap to toggle Layer 1 on/off (sticky) |
-| FUNC/BSLH | Hold for macOS Fn/Globe key, tap for Backslash |
-| L1/Enter | Hold for Layer 1 (Function), tap for Enter |
+| L2/Enter | Hold for Layer 2 (Function), tap for Enter |
 | ⌘+key | Modified keycode — sends Cmd+key (not a macro) |
 | ⌘⇧4 | Screenshot macro — sends Cmd+Shift+4 |
 | ⌘+Click | Macro — holds Cmd while left-clicking (open link in new tab, multi-select) |
+| &sk | Sticky keys. Use modifiers with the next keypress, or hold for active modifier |
 
 ### ZMK Reference
 1. Keycodes: https://zmk.dev/docs/keymaps/list-of-keycodes
@@ -49,9 +47,9 @@ Sofle-specific differences (justified by the extra keys/hardware):
 |----------|----|----|----|----|----|-----|----|----|----|----|----|----|---------|
 | `        | 1  | 2  | 3  | 4  | 5  |     |    | 6  | 7  | 8  | 9  | 0  | EQUAL   |
 | TAB      | Q  | W  | E  | R  | T  |     |    | Y  | U  | I  | O  | P  | MINUS   |
-| FUNC/BSLH | A  | S  | D  | F  | G  |     |    | H  | J  | K  | L  | ;  | '       |
-| ALT      | Z  | X  | C  | V  | B  |     |    | N  | M  | ,  | .  | /  | SHIFT   |
-| Mute (enc) | Caps_Word | Space | Bksp | Cmd | Shift |    |    | Space | L1/Enter | CTRL/ESC | [  | ]  |  |
+| FUNC     | A  | S  | D  | F  | G  |     |    | H  | J  | K  | L  | ;  | '       |
+| &sk ALT      | Z  | X  | C  | V  | B  |     |    | N  | M  | ,  | .  | /  | SHIFT   |
+| Mute (enc) | Caps_Word | BSLH | Bksp | &sk Cmd | &sk Shift |    |    | Space | L2/Enter | CTRL/ESC | [  | ]  |  |
 
 Encoder: Volume Up / Down (push = Mute)
 Joystick (center column): Arrow Keys
@@ -59,31 +57,47 @@ Joystick (center column): Arrow Keys
 > **Notes:**
 > - **10 thumb keys** (5 left + 5 right) + the encoder. The joystick center-press is
 >   omitted from this row for clarity (like the Corne 5-way switch).
->   - Left:  `Caps_Word`, `Space`, `Bksp`, `Cmd`, `Shift`
->   - Right: `Space`, `L1/Enter`, `CTRL/ESC`, `[`, `]`
+>   - Left:  `Caps_Word`, `BSLH`, `Bksp`, `&sk Cmd`, `&sk Shift`
+>   - Right: `Space`, `L2/Enter`, `CTRL/ESC`, `[`, `]`
 > - `Mute (enc)` (leftmost cell) is the rotary encoder push-button (`&kp C_MUTE`) —
 >   shown only because the firmware row forces a binding there.
-> - `ALT` (left pinky, Z-row) matches Corne's `Alt/=` position (Sofle keeps plain Alt —
->   `=` already lives on the number row, so no tap action is needed here).
-> - The thumb `Shift` (L5) replaces the old `&mo 1` — Shift now lives on the thumb,
->   mirroring the Corne thumb-cluster hand position.
+> - Sticky `ALT` (left pinky, Z-row) matches Corne's `Alt/=` position. `=` already
+>   lives on the number row, so no tap action is needed here.
+> - Backslash moves to the second left thumb key; the left outer home-row key sends
+>   the macOS Fn/Globe key directly.
+> - Sticky `Shift` (L5) lives on the thumb, mirroring the Corne thumb-cluster hand
+>   position.
 > - **No sticky Function layer.** Function is reached by **holding Enter**
->   (`&lt 1 ENTER`) only — the old `&mo_tog L1` lock was dropped because an accidental
+>   (`&lt 2 ENTER`) only — the old layer lock was dropped because an accidental
 >   tap on the outermost thumb key silently trapped you in the Function layer.
 > - **Thumb-cluster mods** (matches Corne): `Ctrl/Esc` on the **right thumb** for
->   unix/terminal chords; `Cmd` on the **left thumb** (Mac position); `Bksp` on the
->   **left thumb, outboard of Cmd** — logical reverse of Enter on the opposite hand,
->   so a mishit lands on `Cmd` rather than `Enter`. `Alt` drops to the left-of-Z pinky;
->   the rare `FUNC/BSLH` (hold macOS Globe, tap Backslash) sits on the left-of-A pinky.
+>   unix/terminal chords; sticky `Cmd` on the **left thumb** (Mac position); `Bksp`
+>   on the **left thumb, outboard of Cmd** — logical reverse of Enter on the opposite
+>   hand, so a mishit lands on `Cmd` rather than `Enter`. Sticky `Alt` drops to the
+>   left-of-Z pinky.
 > - `Caps_Word` (`&caps_word`) lives on the **outermost** left thumb key — the easiest
 >   spot to mis-hit, but a stray tap self-cancels at the next word-break, so it's
 >   harmless there. This also frees the right pinky to be a plain `SHIFT` (`&kp RSHFT`)
 >   instead of the `&caps LSHFT 0` hold-tap — simpler, and a true cross-hand Shift.
-> - `Space` sits on the **second** left thumb key (in addition to the right-thumb
->   `Space`) — it replaced `Caps_Word` here so a reach-for-`Bksp` mishit lands on the
->   harmless `Space` rather than toggling Caps Word.
 
-## Layer 1: FUNCTION (hold Enter)
+## Layer 1: Colemak-DH
+
+From QWERTY, press the outermost left thumb key and right-thumb Space
+(`Caps_Word` + `Space`) together to switch to Colemak-DH. Press the same
+physical chord again to return to QWERTY.
+
+The number row, two outer columns, and thumb row remain transparent to fall
+back to the QWERTY layer.
+
+| L        | L1 | L2 | L3 | L4 | L5 | R5 | R4 | R3 | R2 | R1 | R  |
+|----------|----|----|----|----|----|----|----|----|----|----|----|
+|          |    |    |    |    |    |    |    |    |    |    |    |
+|          | Q  | W  | F  | P  | B  | J  | L  | U  | Y  | ;  |    |
+|          | A  | R  | S  | T  | G  | M  | N  | E  | I  | O  |    |
+|          | Z  | X  | C  | D  | V  | K  | H  | ,  | .  | FSLH |  |
+|          |    |    |    |    |    |    |    |    |    |    |    |
+
+## Layer 2: FUNCTION (hold Enter)
 
 Parity with Corne: **Bluetooth on row A**, **RGB on row Z**, vim nav on the right hand.
 Sofle's number row becomes **F1–F10**. Center column = joystick → mouse cursor.
@@ -129,3 +143,4 @@ Joystick (center column): Mouse cursor (`&mmv MOVE_*`); center-press = Left Clic
 | Keys                 | Action                |
 |----------------------|-----------------------|
 | Q + S + Z (hold 2s)  | Soft off (deep sleep) |
+| Left `Caps_Word` + right `Space` | Toggle Colemak-DH |

@@ -27,7 +27,7 @@ layers:
   - O
   - P
   - '-'
-  - {t: \, h: GLOBE}
+  - GLOBE
   - A
   - S
   - D
@@ -40,7 +40,7 @@ layers:
   - L
   - ;
   - ''''
-  - LALT
+  - {t: LALT, h: sticky}
   - Z
   - X
   - C
@@ -55,16 +55,81 @@ layers:
   - RSHFT
   - MUTE
   - '&caps_word'
-  - SPACE
+  - \
   - BSPC
-  - LGUI
-  - LSHFT
+  - {t: LGUI, h: sticky}
+  - {t: LSHFT, h: sticky}
   - {t: ▽, type: trans}
   - SPACE
   - {t: ENTER, h: FUNC}
   - {t: ESC, h: RCTRL}
   - '['
   - ']'
+  COLEMAK-DH:
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - Q
+  - W
+  - F
+  - P
+  - B
+  - {t: ▽, type: trans}
+  - J
+  - L
+  - U
+  - Y
+  - ;
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - A
+  - R
+  - S
+  - T
+  - G
+  - {t: ▽, type: trans}
+  - M
+  - N
+  - E
+  - I
+  - O
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - Z
+  - X
+  - C
+  - D
+  - V
+  - {t: ▽, type: trans}
+  - K
+  - H
+  - ','
+  - .
+  - /
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   FUNC:
   - {t: ▽, type: trans}
   - F1
@@ -133,3 +198,5 @@ layers:
 combos:
 - p: [14, 28, 40]
   k: '&soft_off'
+- p: [53, 59]
+  k: {t: COLEMAK-DH, h: toggle}
