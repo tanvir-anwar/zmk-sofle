@@ -91,7 +91,7 @@
 
         toggle_colemak {
             bindings = <&tog 1>;
-            key-positions = <53 59>;
+            key-positions = <57 59>;
         };
     };
 

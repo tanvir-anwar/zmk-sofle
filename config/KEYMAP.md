@@ -14,8 +14,8 @@ Sofle-specific differences (justified by the extra keys/hardware):
 
 - Number row + brackets live on the base layer, so **no symbol layer is needed**
   (Corne's SYMBOL layer existed only because it lacked a number row).
-- Colemak-DH is a persistent alternate base layer, toggled with the outermost
-  left thumb key plus the right-thumb Space key.
+- Colemak-DH is a persistent alternate base layer, toggled with the left-thumb
+  sticky Shift key plus the right-thumb Space key.
 - Joystick = arrow keys on the base layer; mouse cursor on the Function layer.
 - Three layers: QWERTY (0) + Colemak-DH (1) + FUNCTION (2, hold Enter).
 - **The joystick center-press is omitted from the layout tables below for clarity**
@@ -82,8 +82,8 @@ Joystick (center column): Arrow Keys
 
 ## Layer 1: Colemak-DH
 
-From QWERTY, press the outermost left thumb key and right-thumb Space
-(`Caps_Word` + `Space`) together to switch to Colemak-DH. Press the same
+From QWERTY, press left-thumb sticky Shift and right-thumb Space
+(`&sk Shift` + `Space`) together to switch to Colemak-DH. Press the same
 physical chord again to return to QWERTY.
 
 The number row, two outer columns, and thumb row remain transparent to fall
@@ -143,4 +143,4 @@ Joystick (center column): Mouse cursor (`&mmv MOVE_*`); center-press = Left Clic
 | Keys                 | Action                |
 |----------------------|-----------------------|
 | Q + S + Z (hold 2s)  | Soft off (deep sleep) |
-| Left `Caps_Word` + right `Space` | Toggle Colemak-DH |
+| Left `&sk Shift` + right `Space` | Toggle Colemak-DH |
