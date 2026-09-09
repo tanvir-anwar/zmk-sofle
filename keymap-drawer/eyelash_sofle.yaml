@@ -27,7 +27,7 @@ layers:
   - O
   - P
   - '-'
-  - GLOBE
+  - CAPS
   - A
   - S
   - D
@@ -40,7 +40,7 @@ layers:
   - L
   - ;
   - ''''
-  - {t: LALT, h: sticky}
+  - LALT
   - Z
   - X
   - C
@@ -56,8 +56,8 @@ layers:
   - MUTE
   - '&caps_word'
   - \
+  - {t: TAB, h: LGUI}
   - BSPC
-  - {t: LGUI, h: sticky}
   - {t: LSHFT, h: sticky}
   - {t: ▽, type: trans}
   - SPACE
@@ -79,7 +79,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - TAB
   - Q
   - W
   - F
@@ -91,8 +91,8 @@ layers:
   - U
   - Y
   - ;
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - '-'
+  - CAPS
   - A
   - R
   - S
@@ -104,8 +104,8 @@ layers:
   - E
   - I
   - O
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - ''''
+  - LALT
   - Z
   - X
   - C
@@ -117,7 +117,7 @@ layers:
   - ','
   - .
   - /
-  - {t: ▽, type: trans}
+  - RSHFT
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -131,7 +131,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   FUNC:
-  - {t: ▽, type: trans}
+  - F11
   - F1
   - F2
   - F3
@@ -143,45 +143,45 @@ layers:
   - F8
   - F9
   - F10
-  - RGB BRI
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - F12
+  - '&sys_reset'
+  - TAB
+  - MUTE
+  - F3
   - '&screenshot'
-  - {t: ▽, type: trans}
+  - OUT USB
   - '&mmv MOVE_DOWN'
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - '&mkp LCLK'
+  - '&mkp RCLK'
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - '&bootloader'
   - BT CLR ALL
-  - {t: BT, h: '0'}
-  - {t: BT, h: '1'}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - OUT USB
+  - CAPS
+  - {t: LCTRL, h: sticky}
+  - {t: LALT, h: sticky}
+  - {t: LGUI, h: sticky}
+  - '&caps_word'
   - '&mmv MOVE_LEFT'
   - LEFT
   - DOWN
   - UP
   - RIGHT
-  - '&mkp LCLK'
-  - '&mkp RCLK'
   - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - '&soft_off'
   - RGB OFF
   - RGB ON
-  - RGB EFF
-  - '&sys_reset'
-  - '&soft_off'
+  - {t: BT, h: '0'}
+  - {t: BT, h: '1'}
+  - {t: BT, h: '2'}
   - '&mmv MOVE_RIGHT'
-  - Gui+LEFT
   - PG DN
   - PG UP
-  - Gui+RIGHT
-  - '&cmd_click'
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - MUTE
   - {t: ▽, type: trans}

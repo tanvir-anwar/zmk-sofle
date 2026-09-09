@@ -135,9 +135,9 @@
             bindings = <
 &kp GRAVE      &kp N1       &kp N2      &kp N3      &kp N4     &kp N5        &kp UP_ARROW     &kp N6     &kp N7       &kp N8          &kp N9     &kp N0    &kp EQUAL
 &kp TAB        &kp Q        &kp W       &kp E       &kp R      &kp T         &kp DOWN_ARROW   &kp Y      &kp U        &kp I           &kp O      &kp P     &kp MINUS
-&kp GLOBE      &kp A        &kp S       &kp D       &kp F      &kp G         &kp LEFT_ARROW   &kp H      &kp J        &kp K           &kp L      &kp SEMI  &kp APOS
-&sk LALT       &kp Z        &kp X       &kp C       &kp V      &kp B         &kp RIGHT_ARROW  &kp N      &kp M        &kp COMMA       &kp DOT    &kp FSLH  &kp RSHFT
-&kp C_MUTE     &caps_word   &kp BSLH    &kp BSPC    &sk LGUI   &sk LSHFT     &trans           &kp SPACE  &lt 2 ENTER  &ht RCTRL ESC   &kp LBKT   &kp RBKT
+&kp CAPS       &kp A        &kp S       &kp D       &kp F      &kp G         &kp LEFT_ARROW   &kp H      &kp J        &kp K           &kp L      &kp SEMI  &kp APOS
+&kp LALT       &kp Z        &kp X       &kp C       &kp V      &kp B         &kp RIGHT_ARROW  &kp N      &kp M        &kp COMMA       &kp DOT    &kp FSLH  &kp RSHFT
+&kp C_MUTE     &caps_word   &kp BSLH    &ht LGUI TAB &kp BSPC  &sk LSHFT     &trans           &kp SPACE  &lt 2 ENTER  &ht RCTRL ESC   &kp LBKT   &kp RBKT
             >;
 
             sensor-bindings = <&rsr_vol &rsr_trans>;
@@ -147,9 +147,9 @@
         colemak_dh {
             bindings = <
 &trans         &trans       &trans      &trans       &trans      &trans        &trans           &trans     &trans       &trans           &trans      &trans    &trans
-&trans         &kp Q        &kp W       &kp F        &kp P       &kp B         &trans           &kp J      &kp L        &kp U            &kp Y       &kp SEMI  &trans
-&trans         &kp A        &kp R       &kp S        &kp T       &kp G         &trans           &kp M      &kp N        &kp E            &kp I       &kp O     &trans
-&trans         &kp Z        &kp X       &kp C        &kp D       &kp V         &trans           &kp K      &kp H        &kp COMMA        &kp DOT     &kp FSLH  &trans
+&kp TAB        &kp Q        &kp W       &kp F        &kp P       &kp B         &trans           &kp J      &kp L        &kp U            &kp Y       &kp SEMI  &kp MINUS
+&kp CAPS       &kp A        &kp R       &kp S        &kp T       &kp G         &trans           &kp M      &kp N        &kp E            &kp I       &kp O     &kp APOS
+&kp LALT       &kp Z        &kp X       &kp C        &kp D       &kp V         &trans           &kp K      &kp H        &kp COMMA        &kp DOT     &kp FSLH  &kp RSHFT
 &trans         &trans       &trans      &trans       &trans      &trans        &trans           &trans     &trans       &trans           &trans      &trans
             >;
 
@@ -159,10 +159,10 @@
 
         function_layer {
             bindings = <
-&trans      &kp F1           &kp F2          &kp F3           &kp F4        &kp F5         &mmv MOVE_UP     &kp F6      &kp F7     &kp F8     &kp F9         &kp F10    &rgb_ug RGB_BRI
-&trans      &trans           &trans          &trans           &screenshot   &trans         &mmv MOVE_DOWN   &trans      &trans     &trans     &trans         &trans     &bootloader
-&bt BT_CLR_ALL &bt BT_SEL 0  &bt BT_SEL 1    &trans           &trans        &out OUT_USB   &mmv MOVE_LEFT   &kp LEFT    &kp DOWN   &kp UP     &kp RIGHT      &mkp LCLK  &mkp RCLK
-&trans      &rgb_ug RGB_OFF  &rgb_ug RGB_ON  &rgb_ug RGB_EFF  &sys_reset    &soft_off      &mmv MOVE_RIGHT  &kp LG(LEFT)&kp PG_DN  &kp PG_UP  &kp LG(RIGHT)  &cmd_click &trans
+&kp F11        &kp F1           &kp F2          &kp F3         &kp F4        &kp F5         &mmv MOVE_UP     &kp F6      &kp F7     &kp F8     &kp F9     &kp F10    &kp F12
+&sys_reset     &kp TAB          &kp C_MUTE      &kp F3         &screenshot   &out OUT_USB   &mmv MOVE_DOWN   &trans      &mkp LCLK  &mkp RCLK  &trans     &trans     &bootloader
+&bt BT_CLR_ALL &kp CAPS         &sk LCTRL       &sk LALT       &sk LGUI      &caps_word     &mmv MOVE_LEFT   &kp LEFT    &kp DOWN   &kp UP     &kp RIGHT  &trans     &trans
+&soft_off      &rgb_ug RGB_OFF  &rgb_ug RGB_ON  &bt BT_SEL 0   &bt BT_SEL 1  &bt BT_SEL 2   &mmv MOVE_RIGHT  &kp PG_DN   &kp PG_UP  &trans     &trans     &trans     &trans
 &kp C_MUTE  &trans           &trans          &trans           &trans        &trans         &mkp LCLK        &trans      &trans     &trans     &trans         &trans
             >;
 
