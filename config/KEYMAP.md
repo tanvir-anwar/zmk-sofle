@@ -14,10 +14,10 @@ Sofle-specific differences (justified by the extra keys/hardware):
 
 - Number row + brackets live on the base layer, so **no symbol layer is needed**
   (Corne's SYMBOL layer existed only because it lacked a number row).
-- Colemak-DH is a persistent alternate base layer, toggled with the left-thumb
+- QWERTY is a persistent alternate base layer, toggled with the left-thumb
   sticky Shift key plus the right-thumb Space key.
 - Joystick = arrow keys on the base layer; mouse cursor on the Function layer.
-- Three layers: QWERTY (0) + Colemak-DH (1) + FUNCTION (2, hold Enter).
+- Three layers: Colemak-DH (0) + QWERTY (1) + FUNCTION (2, hold Enter).
 - **The joystick center-press is omitted from the layout tables below for clarity**
   (like the Corne 5-way switch). It still occupies a slot in the `.keymap` thumb row
   — don't be fooled into thinking the bottom row has an extra physical key. There are
@@ -41,14 +41,14 @@ Sofle-specific differences (justified by the extra keys/hardware):
 2. Mod Morph: https://zmk.dev/docs/keymaps/behaviors/mod-morph
 3. Hold Tap: https://zmk.dev/docs/keymaps/behaviors/hold-tap
 
-## Layer 0: QWERTY (default)
+## Layer 0: Colemak-DH (default)
 
 | L        | L1 | L2 | L3 | L4 | L5 | L6  | R6 | R5 | R4 | R3 | R2 | R1 | R       |
 |----------|----|----|----|----|----|-----|----|----|----|----|----|----|---------|
 | `        | 1  | 2  | 3  | 4  | 5  |     |    | 6  | 7  | 8  | 9  | 0  | EQUAL   |
-| TAB      | Q  | W  | E  | R  | T  |     |    | Y  | U  | I  | O  | P  | MINUS   |
-| Caps Lock | A  | S  | D  | F  | G  |     |    | H  | J  | K  | L  | ;  | '       |
-| ALT      | Z  | X  | C  | V  | B  |     |    | N  | M  | ,  | .  | /  | SHIFT   |
+| TAB      | Q  | W  | F  | P  | B  |     |    | J  | L  | U  | Y  | ;  | MINUS   |
+| Caps Lock | A  | R  | S  | T  | G  |     |    | M  | N  | E  | I  | O  | '       |
+| ALT      | Z  | X  | C  | D  | V  |     |    | K  | H  | ,  | .  | /  | SHIFT   |
 | Mute (enc) | Caps_Word | BSLH | CMD/TAB | Bksp | &sk Shift |    |    | Space | L2/Enter | CTRL/ESC | [  | ]  |  |
 
 Encoder: Volume Up / Down (push = Mute)
@@ -78,21 +78,21 @@ Joystick (center column): Arrow Keys
 >   harmless there. This also frees the right pinky to be a plain `SHIFT` (`&kp RSHFT`)
 >   instead of the `&caps LSHFT 0` hold-tap — simpler, and a true cross-hand Shift.
 
-## Layer 1: Colemak-DH
+## Layer 1: QWERTY
 
-From QWERTY, press left-thumb sticky Shift and right-thumb Space
-(`&sk Shift` + `Space`) together to switch to Colemak-DH. Press the same
-physical chord again to return to QWERTY.
+From Colemak-DH, press left-thumb sticky Shift and right-thumb Space
+(`&sk Shift` + `Space`) together to switch to QWERTY. Press the same
+physical chord again to return to Colemak-DH.
 
-The number row and thumb row remain transparent to fall back to the QWERTY layer.
-The two outer columns explicitly match QWERTY and Corne.
+The number row and thumb row remain transparent to fall back to the Colemak-DH
+layer. The two outer columns explicitly match Colemak-DH and Corne.
 
 | L        | L1 | L2 | L3 | L4 | L5 | R5 | R4 | R3 | R2 | R1 | R  |
 |----------|----|----|----|----|----|----|----|----|----|----|----|
 |          |    |    |    |    |    |    |    |    |    |    |    |
-| TAB      | Q  | W  | F  | P  | B  | J  | L  | U  | Y  | ;  | MINUS |
-| Caps Lock | A  | R  | S  | T  | G  | M  | N  | E  | I  | O  | ' |
-| ALT      | Z  | X  | C  | D  | V  | K  | H  | ,  | .  | FSLH | SHIFT |
+| TAB      | Q  | W  | E  | R  | T  | Y  | U  | I  | O  | P  | MINUS |
+| Caps Lock | A  | S  | D  | F  | G  | H  | J  | K  | L  | ;  | ' |
+| ALT      | Z  | X  | C  | V  | B  | N  | M  | ,  | .  | FSLH | SHIFT |
 |          |    |    |    |    |    |    |    |    |    |    |    |
 
 ## Layer 2: FUNCTION (hold Enter)
@@ -138,4 +138,4 @@ Joystick (center column): Mouse cursor (`&mmv MOVE_*`); center-press = Left Clic
 | Keys                 | Action                |
 |----------------------|-----------------------|
 | Q + S + Z (hold 2s)  | Soft off (deep sleep) |
-| Left `&sk Shift` + right `Space` | Toggle Colemak-DH |
+| Left `&sk Shift` + right `Space` | Toggle QWERTY |
